@@ -1,0 +1,44 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5673
+    username: events_user
+    password: events_pass
+    virtual-host: /
+
+  kafka:
+    bootstrap-servers: localhost:9093
+    admin:
+      fail-fast: false
+    consumer:
+      group-id: ${spring.application.name}
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+app:
+  kafka:
+    topics:
+      orders: orders-topic
+  rabbitmq:
+    queues:
+      notifications: notifications.queue
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    root: INFO
+    pe.resteban: DEBUG

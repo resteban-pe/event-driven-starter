@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pe.resteban.events.kafka.producer.OrderEventProducerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.491 s -- in pe.resteban.events.kafka.producer.OrderEventProducerTest

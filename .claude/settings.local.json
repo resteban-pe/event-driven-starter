@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./mvnw compile:*)",
+      "Bash(mvn compile:*)",
+      "Bash(mvn spring-boot:run -Dspring-boot.run.profiles=dev -e)",
+      "Bash(docker ps:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker exec:*)",
+      "Bash(mvn spring-boot:run -Dspring-boot.run.profiles=dev)",
+      "Bash(netstat -ano)",
+      "Bash(findstr \":8080\")",
+      "Bash(findstr \"LISTENING\")",
+      "Bash(taskkill:*)",
+      "Bash(cmd /c \"taskkill /PID 29880 /F\" 2>&1)",
+      "Bash(cmd /c \"taskkill /PID 29880 /F 2>&1\")",
+      "Bash(cmd /c 'taskkill /PID 29880 /F')",
+      "Bash(powershell -Command \"Stop-Process -Id 29880 -Force -ErrorAction SilentlyContinue; Start-Sleep 1; \\\\$p = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\(\\\\$p\\) { Write-Host 'ocupado' } else { Write-Host 'libre' }\" 2>&1)",
+      "Bash(powershell -Command \"Stop-Process -Id 29880 -Force -ErrorAction SilentlyContinue\")",
+      "Bash(powershell -Command \"Stop-Process -Id \\(Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue\\).OwningProcess -Force -ErrorAction SilentlyContinue\")",
+      "Bash(Read \"C:\\\\Users\\\\reste\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--Proyectos-TICs-event-driven-starter\\\\86f408e4-bb73-4613-90c3-58515b24c47b\\\\tasks\\\\btpqs378t.output\")",
+      "Bash(mvn test-compile:*)",
+      "Bash(mvn test:*)"
+    ]
+  }
+}

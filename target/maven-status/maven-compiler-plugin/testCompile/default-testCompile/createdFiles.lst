@@ -1,0 +1,4 @@
+pe\resteban\events\rest\EventControllerIT.class
+pe\resteban\events\kafka\producer\OrderEventProducerTest.class
+pe\resteban\events\EventDrivenStarterApplicationTests.class
+pe\resteban\events\model\OrderEventTest.class
